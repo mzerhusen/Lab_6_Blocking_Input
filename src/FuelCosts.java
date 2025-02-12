@@ -5,11 +5,12 @@ public class FuelCosts
     public static void main(String[] args)
     {
         Scanner in = new Scanner(System.in);
-        double fuelCapacity;
-        double fuelEfficiency;
-        double fuelPrice;
+        double fuelCapacity = 0.0;
+        double fuelEfficiency = 0.0;
+        double fuelPrice = 0.0;
         double fullTank;
-        double hundredMiles;
+        double hundredMilesGallons;
+        double hundredMilesCost;
         String userError;
         boolean validCapacity = false;
         boolean validEfficiency = false;
@@ -90,6 +91,11 @@ public class FuelCosts
         }
         while(!validPrice);
 
+        hundredMilesGallons = (100 / fuelEfficiency);
+        hundredMilesCost = hundredMilesGallons * fuelPrice;
+        System.out.println("It will cost " + hundredMilesCost + " to drive 100 miles");
+        fullTank = (fuelCapacity * fuelEfficiency);
+        System.out.println("On a full tank of fuel, you'll be able to drive " + fullTank + " miles.");
 
 
     }

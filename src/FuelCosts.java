@@ -36,7 +36,7 @@ public class FuelCosts
             else
             {
                 userError = in.nextLine();
-                System.out.println(userError + "is not a valid entry.");
+                System.out.println(userError + " is not a valid entry.");
             }
         }
         while(!validCapacity);
@@ -44,7 +44,7 @@ public class FuelCosts
         // Get valid fuel efficiency process
         do
         {
-            System.out.println("How many miles can your vehicle drive per gallon of fuel? ");
+            System.out.print("How many miles can your vehicle drive per gallon of fuel? ");
             if(in.hasNextDouble())
             {
                 fuelEfficiency = in.nextDouble();
@@ -61,7 +61,7 @@ public class FuelCosts
             else
             {
                 userError = in.nextLine();
-                System.out.println(userError + "is not a valid entry.");
+                System.out.println(userError + " is not a valid entry.");
             }
         }
         while(!validEfficiency);
@@ -69,7 +69,7 @@ public class FuelCosts
         // Get valid fuel price process
         do
         {
-            System.out.print("What is the price of fuel in dollars? (x.xx)");
+            System.out.print("What is the price of fuel in dollars? (x.xx) ");
             if(in.hasNextDouble())
             {
                 fuelPrice = in.nextDouble();
@@ -86,17 +86,15 @@ public class FuelCosts
             else
             {
                 userError = in.nextLine();
-                System.out.println(userError + "is not a valid entry.");
+                System.out.println(userError + " is not a valid entry.");
             }
         }
         while(!validPrice);
 
         hundredMilesGallons = (100 / fuelEfficiency);
         hundredMilesCost = hundredMilesGallons * fuelPrice;
-        System.out.println("It will cost " + hundredMilesCost + " to drive 100 miles");
+        System.out.printf("It will cost %3.2f to drive 100 miles.%n", hundredMilesCost);
         fullTank = (fuelCapacity * fuelEfficiency);
-        System.out.println("On a full tank of fuel, you'll be able to drive " + fullTank + " miles.");
-
-
+        System.out.println("On a full tank, you'll be able to drive " + fullTank + " miles.");
     }
 }

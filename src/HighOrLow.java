@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class HighorLow
+public class HighOrLow
 {
     public static void main(String[] args)
     {

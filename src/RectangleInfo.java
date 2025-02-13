@@ -35,7 +35,7 @@ public class RectangleInfo {
             else
             {
                 userError = in.nextLine();
-                System.out.println(userError + "is an invalid entry. Please enter a valid number.");
+                System.out.println(userError + " is an invalid entry. Please enter a valid number.");
             }
         }
         while(!validHeight);
@@ -43,7 +43,7 @@ public class RectangleInfo {
         //Get the width.
         do
         {
-            System.out.println("Enter the width of the rectangle: ");
+            System.out.print("Enter the width of the rectangle: ");
             if(in.hasNextDouble())
             {
                 rectangleWidth = in.nextDouble();
@@ -60,7 +60,7 @@ public class RectangleInfo {
             else
             {
                 userError = in.nextLine();
-                System.out.println(userError + "is an invalid entry. Please enter a valid number.");
+                System.out.println(userError + " is an invalid entry. Please enter a valid number.");
             }
         }
         while(!validWidth);

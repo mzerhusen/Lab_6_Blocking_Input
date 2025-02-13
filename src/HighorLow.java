@@ -8,7 +8,7 @@ public class HighorLow
         Scanner in = new Scanner(System.in);
         int randomNumber;
         int userGuess = 0;
-        String userError = "";
+        String userError;
         boolean validGuess = false;
 
         // Generate the number
